@@ -1,9 +1,11 @@
-long long sum_array(long long* from, long long* to) {
+#include <cstddef>
+
+int sum_array(int* from, int* to) {
     if (from == nullptr || to == nullptr || from > to) {
-        return 0LL;
+        return 0;
     }
-    long long sum = 0;
-    for (long long* p = from; p != to; ++p) {
+    int sum = 0;
+    for (int* p = from; p != to; ++p) {
         sum += *p;
     }
     return sum;
